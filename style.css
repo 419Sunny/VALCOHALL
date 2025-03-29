@@ -1,0 +1,343 @@
+ /* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;    
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+  /* background-image: url(images/pngwing.com\ \(7\).png);
+  background-color: #6287bf;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; */
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+  /* Optional: Add some custom styles for the modal background */
+  .modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Blur effect */
+    z-index: 1000; /* Ensure it is above other content */
+}
+.modal-image{
+  height:100%;
+}
+
+/* Blur effect for the body when modal is open */
+body.modal-open {
+    overflow: hidden; /* Prevent scrolling */
+}
+/* .carousel-item{
+  height: 500px;
+} */
+.carousel-item{
+
+    background-position: center;
+    align-content: center;
+}
+
+.section{
+    height: 150px;
+    background: linear-gradient(rgba(192, 182, 182, 0.7),rgba(192, 182, 182, 0.7)), url(images/hacking-blog-image.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    text-align: center;
+}
+.gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(8, 4vw);
+    grid-gap: 1.5rem;
+}
+.gallery_item_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.gallery_item_1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 8;
+}
+.gallery_item_2 {
+    grid-column-start: 4;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+.gallery_item_3 {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 8;
+}
+.gallery_item_4 {
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row-start: 4;
+    grid-row-end: 8;
+}
+.gallery_item_content {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 9;
+    width: 70%;
+}
+.gallery_item_title {
+    color: #000000;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+/* event page upcaoming event video*/
+.live&upcoming{
+    display: flex;
+    width: 100%;
+    height: 700px;}
+/* contact page */
+.border-custom{
+    border: 1px solid #444;
+    transition: all 0.5s ease-in-out;
+}
+.border-custom:hover{
+    border-color: #3982ef;
+}
+/* cards scroll start */
+.card-skin {
+  display: flex;
+  padding: 20px 20px;
+  align-items: center;
+  justify-content: center;
+  min-height: 60%;
+  background: linear-gradient(to left top, #031A9A, #8B53FF);
+}
+
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+}
+
+.wrapper i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+  z-index: 10;
+}
+
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper i:first-child {
+  left: -22px;
+}
+
+.wrapper i:last-child {
+  right: -22px;
+}
+
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 4) - 12px); /* Set to 4 cards per view */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel .card {
+  scroll-snap-align: start;
+  height: 342px;
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.carousel .card .img {
+  background: #8B53FF;
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+}
+
+.card .img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+
+.carousel .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+}
+
+.carousel .card span {
+  color: #6A6D78;
+  font-size: 1.31rem;
+}
+
+.hall-anthem{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+/* table  start*/
+table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 3px;
+      
+  }
+ 
+  th, td {
+      border: 1px solid #ddd;
+      padding: 5px;
+      text-align: left;
+      text-overflow: clip;
+  }
+  th {
+      background-color: #005eff;
+      color: white;
+  }
+  tr:nth-child(even) {
+      background-color: #f2f2f2;
+  }
+  @media (max-width: 600px) {
+      th, td {
+          font-size: 14px;
+          /* overflow-x: hidden; */
+      }
+      .carousel{
+        margin-top: 70px;
+      }
+    }
+    /* table end */
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px); /* 2 cards per view */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%; /* 1 card per view */
+  }
+}
+/* card scroll end */
+
+  
+  @media only screen and (max-width: 1200px) {
+    .right-content {
+      width: 100%;
+    }
+  
+    .right-content h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.3rem;
+    }
+  }
+  
+  @media only screen and (max-width: 998px) {
+    .popup-right {
+      width: 100%;
+    }
+  
+    .popup-left {
+      display: none;
+    }
+  
+    .right-content h1 {
+      font-size: 5rem;
+    }
+  }
+@media(max-width:1440px){
+    .carousel-item{
+        max-height: 600px;
+    }
+    }
+    @media only screen and (max-width: 1200px){
+    .right-content {
+        width: 100%;
+    }}
+    @media(max-width:440px){
+        .popup-close{
+            position: absolute;
+            right: 70px;
+        } 
+        .col-lg-6 iframe{
+            width: 100%;
+            margin: auto;
+        }
+        /* .col-lg-6{
+          width: 100%;
+          padding: 0px;
+        } */
+
+    }
